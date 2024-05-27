@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Root from './Root.jsx';
 import SearchApi from './Api/SearchApi.jsx';
+// import Search from './Components/Search/Search.jsx';
 const router = createBrowserRouter([
   {
     path: "/",

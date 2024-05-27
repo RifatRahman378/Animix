@@ -13,13 +13,13 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-100">
             <div className="flex-1">
-                <Link to='/'><a className="btn btn-ghost text-xl">daisyUI</a></Link>
+                <Link to='/' className="btn btn-ghost text-xl">daisyUI</Link>
             </div>
             <div className="flex-none gap-2">
                 <div className="form-control">
                     <input
                         type="text"
-                        placeholder="Search"
+                        placeholder={searchValue ? '' : 'Search'}
                         className="input input-bordered w-24 md:w-auto"
                         value={searchValue}
                         onChange={(e) => setSearchValue(e.target.value)}
