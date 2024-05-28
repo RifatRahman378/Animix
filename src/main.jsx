@@ -7,7 +7,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from './Root.jsx';
-import SearchApi from './Api/SearchApi.jsx';
+// import SearchApi from './Api/SearchApi.jsx';
+import { MantineProvider } from '@mantine/core';
+import Search from './Components/Search/Search.jsx';
+import AnimeInfo from './Components/AnimeInfo/AnimeInfo.jsx';
 // import Search from './Components/Search/Search.jsx';
 const router = createBrowserRouter([
   {
@@ -16,11 +19,15 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<App></App>,
+        element: <MantineProvider><App></App></MantineProvider> ,
       },
       {
         path:'/search',
-        element:<SearchApi></SearchApi>
+        element:<Search></Search>
+      },
+      {
+        path:'/anime/:title',
+        element: <AnimeInfo></AnimeInfo>,
       }
     ]
   },

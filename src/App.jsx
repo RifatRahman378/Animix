@@ -18,6 +18,7 @@ function App() {
     return (
         <>
             this is home
+           
             <div>
                 <div className="carousel w-full">
                     {test.map((result, index) => (
@@ -47,7 +48,7 @@ function App() {
 
 
 
-
+<div className='flex justify-center'>
             <div className='grid grid-cols-3'>
                 {test.map((result, index) => (
                     <div key={index} className="card w-96 bg-base-100 shadow-xl">
@@ -64,6 +65,7 @@ function App() {
                     </div>
                 ))}
 
+            </div>
             </div>
         </>
     );
